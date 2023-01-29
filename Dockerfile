@@ -9,6 +9,7 @@ COPY ./app /app
 WORKDIR /app
 EXPOSE 8000
 
+ARG DEV=false
 RUN python -m venv /py
 RUN /py/bin/pip install --upgrade pip
 RUN /py/bin/pip install -r /tmp/requirements.txt
